@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const uri = require('./app/config/db.config.js');
+const uri = require('./node/config/db.config.js');
 
 const mongoose = require('mongoose');
-require('./app/routes/spoti.router.js')(app);
+require('./node/routes/spoti.router.js')(app);
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
